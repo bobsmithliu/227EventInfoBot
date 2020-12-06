@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-//Nzg0OTI4NDE0Mzg0NTIxMjg2.X8wbjQ.PU3NLhJ3JY0l3kuEz08JbOFC1pQ
+
 bot.login(process.env.token);
 
 bot.on('ready', () =>{
@@ -10,12 +10,13 @@ bot.on('ready', () =>{
 bot.on('message', msg => {
     if(msg.content === 'check' && msg.author != bot.user) {
         msg.reply('recieve');
+        
         msg.pin(msg.content);
     }
 });
 const prefix = '!';
 bot.on('message', msg => {
-    if(msg.content.startsWith(prefix + 'Reina')) {
+    if(msg.content.startsWith(prefix + 'reina')) {
         msg.reply('Big sexy');
     }
 });

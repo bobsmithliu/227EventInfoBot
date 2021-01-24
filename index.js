@@ -53,6 +53,5 @@ bot.on('message', msg => {
 bot.on('message',msg =>{
     if(msg.content.startsWith(prefix + "add")){
         msg.reply(msg.content);
-        
     }
 });

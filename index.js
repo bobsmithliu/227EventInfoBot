@@ -32,12 +32,7 @@ bot.on('message', msg => {
 bot.on('message', msg => {
     console.log(msg.author.username);
 });
-//display task list
-bot.on('message', msg => {
-    if(msg.content.startsWith(prefix + "task")) {
-        msg.reply("There is no task for now");
-    }
-});
+
 //add task
 bot.on('message',msg =>{
     let addprefix = "!add";
@@ -47,12 +42,3 @@ bot.on('message',msg =>{
         msg.reply("Your new task is: " + context);
     }
 });
-
-//clear task list 
-bot.on('message',msg =>{
-    if(msg.content.startsWith(prefix+"clear")){
-        msg.reply("Task list cleared");
-    }
-});
-
-//redepoly

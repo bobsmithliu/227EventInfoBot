@@ -2,10 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const prefix = '!';
 
-function Task(taskdescription,isDone){
-    this.taskdescription = taskdescription;
-    this.isDone = isDone;
-};
+
 bot.login(process.env.token);
 
 bot.on('ready', () =>{
@@ -43,7 +40,7 @@ bot.on('message', msg => {
 });
 //add task
 bot.on('message',msg =>{
-    let addprefix = "!add"
+    let addprefix = "!add";
     const args = msg.content.slice(addprefix.length);
     const context = args.shift().toLowerCase();
     if(msg.content.startsWith(prefix + "add")){

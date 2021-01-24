@@ -38,15 +38,7 @@ bot.on('message', msg => {
 //display task list
 bot.on('message', msg => {
     if(msg.content.startsWith(prefix + "task")) {
-        if(taskList.length == 0){
-            msg.reply("Please add new task! No task");
-        } else {
-            msg.reply("Your current task: ")
-            for (let v = 0;v<taskList.length;v++) {
-                msg.reply(taskList[v].taskdescription);
-                msg.reply(taskList[v].isDone);
-            }
-        }
+        msg.reply("There is no task for now");
     }
 });
 //add task
@@ -56,14 +48,12 @@ bot.on('message',msg =>{
     const context = args.shift().toLowerCase();
     if(msg.content.startsWith(prefix + "add")){
         msg.reply("Your new task is: " + context);
-        taskList.push(new Task(context,false));
     }
 });
 
 //clear task list 
 bot.on('message',msg =>{
     if(msg.content.startsWith(prefix+"clear")){
-        taskList = [];
         msg.reply("Task list cleared");
     }
 });

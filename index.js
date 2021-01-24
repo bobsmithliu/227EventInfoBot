@@ -59,3 +59,11 @@ bot.on('message',msg =>{
         taskList.push(new Task(context,false));
     }
 });
+
+//clear task list 
+bot.on('message',msg =>{
+    if(msg.content.startsWith(prefix+"clear")){
+        taskList = [];
+        msg.reply("Task list cleared");
+    }
+});

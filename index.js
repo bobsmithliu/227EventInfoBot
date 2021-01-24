@@ -51,7 +51,10 @@ bot.on('message', msg => {
 });
 //add task
 bot.on('message',msg =>{
+    let addprefix = "!add"
+    const args = msg.content.slice(addprefix.length).trim().split(' ');
+    const context = args.shift().toLowerCase();
     if(msg.content.startsWith(prefix + "add")){
-        msg.reply(msg.content);
+        msg.reply(context);
     }
 });

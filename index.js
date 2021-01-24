@@ -52,7 +52,7 @@ bot.on('message', msg => {
 //add task
 bot.on('message',msg =>{
     if(msg.content.startsWith(prefix + "add")){
-        msg.reply("Please enter new task description");
         msg.reply(msg.content);
+        
     }
 });

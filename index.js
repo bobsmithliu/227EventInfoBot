@@ -42,7 +42,7 @@ bot.on('message', msg => {
     if(!msg.content.startsWith(addPrefix) || msg.author.bot) return;
     const args = msg.content.slice(addPrefix.length);
     const command = args.shift().toLowerCase();
-    if (msg.autho != bot.user) {
+    if (msg.author != bot.user) {
         msg.channel.send(command);
     }
 });

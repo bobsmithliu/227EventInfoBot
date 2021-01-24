@@ -39,11 +39,8 @@ bot.on('message', msg => {
 //add task 
 bot.on('message', msg => {
     let addPrefix = "!add";
-    if(!msg.content.startsWith(addPrefix) || msg.author.bot) return;
     const args = msg.content.slice(addPrefix.length);
     const command = args.shift().toLowerCase();
-    if (msg.author != bot.user) {
         msg.channel.send(command);
-    }
 });
 

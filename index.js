@@ -42,9 +42,9 @@ bot.on('message', msg => {
             msg.reply("Please add new task! No task");
         } else {
             msg.reply("Your current task: ")
-            for (t in taskList) {
-                msg.reply(t.taskdescription);
-                msg.reply(t.isDone);
+            for (let v = 0;v<taskList.length;v++) {
+                msg.reply(taskList[v].taskdescription);
+                msg.reply(taskList[v].isDone);
             }
         }
     }

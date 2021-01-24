@@ -1,7 +1,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const prefix = '!';
-
+function Task (description,isDone){
+    this.description = description;
+    this.isDone = isDone;
+}
 
 bot.login(process.env.token);
 
@@ -12,8 +15,6 @@ bot.on('ready', () =>{
 bot.on('message', msg => {
     if(msg.content === 'check' && msg.author != bot.user) {
         msg.reply('recieve');
-        
-        msg.pin(msg.content);
     }
 });
 
@@ -30,7 +31,7 @@ bot.on('message', msg => {
 });
 
 bot.on('message', msg => {
-    console.log(msg.author.username);
+    msg.channel.send(msg.author.username);
 });
 
 

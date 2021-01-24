@@ -31,7 +31,9 @@ bot.on('message', msg => {
 });
 
 bot.on('message', msg => {
-    msg.channel.send(msg.author.username);
+    if(msg.author != bot.user) {
+        msg.channel.send(msg.author.username);
+    }
 });
 
 

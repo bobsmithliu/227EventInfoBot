@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const prefix = '!';
-let taskList = [];
+
 function Task(taskdescription,isDone){
     this.taskdescription = taskdescription;
     this.isDone = isDone;

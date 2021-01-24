@@ -41,6 +41,8 @@ bot.on('message', msg => {
     let addPrefix = "!add";
     const args = msg.content.slice(addPrefix.length);
     const command = args.shift().toLowerCase();
+    if(msg.content.startsWith(prefix + "add")){
         msg.channel.send(command);
+    }
 });
 

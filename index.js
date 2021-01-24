@@ -55,6 +55,7 @@ bot.on('message',msg =>{
     const args = msg.content.slice(addprefix.length).trim().split(' ');
     const context = args.shift().toLowerCase();
     if(msg.content.startsWith(prefix + "add")){
+        msg.reply("Your new task is: " + context);
         taskList.push(new Task(context,false));
     }
 });
